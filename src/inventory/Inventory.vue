@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
+import InventoryFilters from './InventoryFilters.vue';
 import ProductList from './ProductList.vue';
 
 const inputText = ref('');
@@ -35,9 +36,10 @@ const coffee = computed(() => [
 <template>
   <h1 class="page-header">Inventory</h1>
 
-  <input v-model="inputText" style="padding: 0.5rem; border-color:lavender; display: block;" placeholder="Search..." />
-  <input type="checkbox" id="inStockOnly" v-model="inStockOnly" />
-  <label for="inStockOnly">Show only in stock items</label>
+  <InventoryFilters
+    v-model:search-text="inputText"
+    v-model:in-stock-only="inStockOnly"
+  />
 
   <ProductList title="Sporting Goods" :items="sportingGoods" />
   <ProductList title="Electronics" :items="electronics" />
