@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue';
 import InventoryFilters from './InventoryFilters.vue';
 import ProductList from './ProductList.vue';
+import PageHeader from '../components/PageHeader.vue';
 
 const inputText = ref('');
 const inStockOnly = ref(false);
@@ -34,7 +35,7 @@ const coffee = computed(() => [
 </script>
 
 <template>
-  <h1 class="page-header">Inventory</h1>
+  <PageHeader>Inventory</PageHeader>
 
   <InventoryFilters
     v-model:search-text="inputText"
@@ -45,10 +46,3 @@ const coffee = computed(() => [
   <ProductList title="Electronics" :items="electronics" />
   <ProductList title="Coffee" :items="coffee" />
 </template>
-
-<style>
-.page-header {
-  text-transform: uppercase;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-</style>
