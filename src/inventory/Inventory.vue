@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ProductList from './ProductList.vue';
+
 const sportingGoods = [
   { name: "Football", price: 49.99 },
   { name: "Baseball", price: 9.99 },
@@ -16,16 +18,7 @@ const coffee = [
 
 <template>
   <h1>Inventory</h1>
-  <h2>Sporting Goods</h2>
-  <div v-for="item in sportingGoods">
-    {{ item.name }} (${{ item.price }})
-  </div>
-  <h2>Electronics</h2>
-  <div v-for="item in electronics">
-    {{ item.name }} (${{ item.price }})
-  </div>
-  <h2>Coffee</h2>
-  <div v-for="item in coffee">
-    {{ item.name }} (${{ item.price }})
-  </div>
+  <ProductList title="Sporting Goods" :items="sportingGoods" />
+  <ProductList title="Electronics" :items="electronics" />
+  <ProductList title="Coffee" :items="coffee" />
 </template>
