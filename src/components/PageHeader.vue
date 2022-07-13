@@ -1,12 +1,5 @@
 <template>
-  <h1 class="page-header">
+  <h1 font-header class="font-header uppercase text-2xl mb-2">
     <slot></slot>
   </h1>
 </template>
-
-<style>
-.page-header {
-  text-transform: uppercase;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-</style>

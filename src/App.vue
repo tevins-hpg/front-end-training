@@ -23,6 +23,8 @@ const currentView = computed(() => {
 </script>
 
 <template>
-  <Header />
-  <component v-if="currentView" :is="currentView" />
+  <div class="p-3">
+    <Header />
+    <component v-if="currentView" :is="currentView" />
+  </div>
 </template>

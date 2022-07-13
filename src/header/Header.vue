@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import Link from '../components/Link.vue';
 </script>
 
 <template>
-  <a href="#/">Home</a> |
-  <a href="#/inventory">Inventory</a>
+  <Link href="#/">Home</Link> |
+  <Link href="#/inventory">Inventory</Link>
 </template>

@@ -13,7 +13,7 @@ defineEmits<{
   <input
     :value="props.modelValue"
     @input="$emit('update:modelValue', $event.target?.value)"
-    style="padding: 0.5rem; border-color:lavender; display: block;"
+    class="p-1 border rounded-md block"
     placeholder="Search..."
   />
 </template>

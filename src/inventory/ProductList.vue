@@ -10,11 +10,16 @@ const props = defineProps<{
 </script>
 
 <template>
-  <h2>{{ props.title }}</h2>
-  <div v-for="item in props.items" :style="{ color: item.outOfStock ? 'red': 'black' }">
-    {{ item.name }} (${{ item.price }})
-  </div>
-  <div v-if="!props.items.length" style="font-style: italic;">
-    No items available.
+  <div class="mb-2">
+    <h2 class="font-bold text-xl">{{ props.title }}</h2>
+    <div
+      v-for="item in props.items"
+      :class="{ 'text-red-500': item.outOfStock }"
+    >
+      {{ item.name }} (${{ item.price }})
+    </div>
+    <div v-if="!props.items.length" class="italic">
+      No items available.
+    </div>
   </div>
 </template>
