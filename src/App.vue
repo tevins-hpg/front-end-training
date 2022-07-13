@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import Inventory from './inventory/Inventory.vue';
 </script>
 
 <template>
+  <Inventory />
 </template>
 
 <style>
